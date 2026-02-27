@@ -11,9 +11,9 @@
 </p>
 
 
-| Latest Stable Release | Upstream URL |
-| :---: | :---: |
-| [Click here](https://github.com/pkgforge-dev/CLK-AppImage/releases/latest) | [Click here](https://github.com/TomHarte/CLK) |
+| Latest Stable Release | Latest Nightly Relase | Upstream URL |
+| :---: | :---: | :---: |
+| [Click here](https://github.com/pkgforge-dev/CLK-AppImage/releases/latest) | [Click here](https://github.com/pkgforge-dev/CLK-AppImage/releases/tag/nightly) | [Click here](https://github.com/TomHarte/CLK) |
 
 </div>
 
