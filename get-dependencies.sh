@@ -28,8 +28,7 @@ if [ "${DEVEL_RELEASE-}" = 1 ]; then
     git clone "$REPO" ./CLK
 else
 	echo "Making stable build of CLK..."
-	TAG_NAME="2026-02-23"
-	VERSION=$(git ls-remote --tags "$REPO" | grep "refs/tags/${TAG_NAME}\^{}" | awk '{print $1}')
+	VERSION=$(git ls-remote --tags --sort="v:refname" "$REPO" | grep -v '\^{}' | tail -n1 | sed 's|.*/||')
 	git clone --branch "$VERSION" --single-branch "$REPO" ./CLK
 fi
 echo "$VERSION" > ~/version
