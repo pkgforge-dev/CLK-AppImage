@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Clock Signal
+Comment="A latency-hating emulator for 8 and 16 bit platforms"
+Icon=Icon
+Exec=clksignal
+Terminal=false
+StartupWMClass=clksignal
+Categories=Game;Emulator;
