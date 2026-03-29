@@ -6,18 +6,12 @@ ARCH=$(uname -m)
 
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
-pacman -Syu --noconfirm \
-    qt6-base       \
-    qt6-multimedia
+pacman -Syu --noconfirm kvantum lxqt-qtplugin qt6-multimedia qt6ct
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
 
-# Comment this out if you need an AUR package
-#make-aur-package PACKAGENAME
-
-# If the application needs to be manually built that has to be done down here
 echo "Building CLK..."
 echo "---------------------------------------------------------------"
 REPO="https://github.com/TomHarte/CLK"
@@ -28,7 +22,8 @@ if [ "${DEVEL_RELEASE-}" = 1 ]; then
     git clone "$REPO" ./CLK
 else
 	echo "Making stable build of CLK..."
-	VERSION=2026-02-23
+	#VERSION="$(git ls-remote --tags --sort="v:refname" "$REPO" | awk -F'"' '/"tag_name":/ {print $4}')" can't make this to work at all, it fails or grabs a commit from 2018
+	VERSION=2026-04-07
 	git clone --branch "$VERSION" --single-branch "$REPO" ./CLK
 fi
 echo "$VERSION" > ~/version
