@@ -8,7 +8,7 @@ echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
 	kvantum        \
-    xqt-qtplugin   \
+    lxqt-qtplugin   \
 	qt6-multimedia \
 	qt6ct
 
