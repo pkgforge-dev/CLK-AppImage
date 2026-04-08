@@ -9,6 +9,7 @@ export ADD_HOOKS="self-updater.bg.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=https://raw.githubusercontent.com/TomHarte/CLK/refs/heads/master/READMEImages/Icon.png
 export DEPLOY_QT=1
+export QT_DIR=qt6
 
 # Deploy dependencies
 quick-sharun ./AppDir/bin/clksignal
