@@ -14,8 +14,6 @@ export QT_DIR=qt6
 # Deploy dependencies
 quick-sharun ./AppDir/bin/clksignal
 
-# Additional changes can be done in between here
-
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
 
