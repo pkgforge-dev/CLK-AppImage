@@ -10,7 +10,7 @@ pacman -Syu --noconfirm kvantum lxqt-qtplugin qt6-multimedia qt6ct
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
-get-debloated-pkgs --add-common --prefer-nano
+get-debloated-pkgs --add-common --prefer-nano qt6-base-mini
 
 echo "Building CLK..."
 echo "---------------------------------------------------------------"
